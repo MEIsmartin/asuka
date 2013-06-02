@@ -9,6 +9,7 @@ gem 'rails', '3.2.13'
 group :development, :test do
 	gem 'sqlite3'
 	gem 'rspec-rails', '~> 2.11.1'
+  gem 'guard-rspec', '0.5.5'
 end
 
 
@@ -29,6 +30,13 @@ gem 'jquery-rails'
 
 group :test do
 	gem 'capybara', '1.1.2'
+  gem 'rb-fchange', '0.0.5'
+  gem 'rb-notifu', '0.0.4'
+  require 'rbconfig'
+  gem 'wdm', '>= 0.1.0' if RbConfig::CONFIG['target_os'] =~ /mswin|mingw/i
+  gem 'win32console', '1.3.0'
+  gem 'guard-spork', '0.3.2'
+  gem 'spork', '0.9.0'
 end
 
 group :production do
